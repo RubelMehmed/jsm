@@ -87,7 +87,7 @@ useEffect(() => {
             ) : (
                 <>
                 {providers && Object.values(providers).map((provider) => (
-                    <button type="button" onClick={() => signIn(provider.id)} className="outline_btn black_btn">
+                    <button key={provider.id} type="button" onClick={() => signIn(provider.id)} className="outline_btn black_btn">
                         Sign in with {provider.name}
                     </button>
                 ))}
@@ -111,7 +111,7 @@ useEffect(() => {
             ):(
                 <>
                 {providers && Object.values(providers).map((provider) => (
-                    <button type="button" onClick={() => signIn(provider.id)} className="outline_btn black_btn">
+                    <button key={provider.key} type="button" onClick={() => signIn(provider.id)} className="outline_btn black_btn">
                         Sign in with {provider.name}
                     </button>
                 ))}
